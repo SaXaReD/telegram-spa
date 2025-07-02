@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import s from './CurrentPost.module.css';
-import dotenv from 'dotenv';
 
 export default function CurrentPost() {
   const [post, setPost] = useState({ text: 'Ожидаем пост...', image: '/images/default.svg' });
