@@ -1,0 +1,7 @@
+/* Глобальные стили */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(200deg, blue 0%, white 100%);
+}

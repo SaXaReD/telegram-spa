@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: telegram-bot-server
+    env: node
+    rootDir: server
+    startCommand: npm run server
+    buildCommand: npm install
+    autoDeploy: true
+    envVars:
+      - key: TELEGRAM_TOKEN
+        sync: false
+      - key: WEBHOOK_URL
+        sync: false
+      - key: PORT
+        value: 3001
+
+  - type: static
+    name: telegram-bot-spa
+    rootDir: astro-app
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
+    autoDeploy: true
+    envVars:
+      - key: PUBLIC_WS_URL
+        value: wss://telegram-bot-server.onrender.com

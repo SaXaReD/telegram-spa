@@ -1,0 +1,80 @@
+.appWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 1rem 1.25rem 1rem;
+  gap: 20px;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.topButtons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 500px;
+  gap: 1rem;
+}
+
+.topButtons button {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  background-color: #e6e6e6;
+  border: none;
+  font-weight: bold;
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+
+.topButtons button:hover {
+  background-color: #ccc;
+}
+
+.cardWrapper {
+  text-align: center;
+  margin: 0 15vw 5vh;
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.newsCard {
+  border-radius: 12px;
+  max-height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.newsCard img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+}
+
+.newsText {
+  margin: 1rem 0 0 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.newsCard::-webkit-scrollbar {
+  width: 2px;
+}
+
+.newsCard::-webkit-scrollbar-thumb {
+  background-color: #bbb;
+  border-radius: 6px;
+}
+
+.newsCard::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+@media screen and (max-width: 364px) {
+  .topButtons {
+    flex-direction: column;
+  }
+}
